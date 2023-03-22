@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double meters;
+double choice;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter a distance in meters: ");
+        meters= keyboard.nextDouble();
+        //System.out.println("You entered "+ meters + " meters");
+        System.out.println("This is the menu");
+
+        //display menu
+        displayMenu();
+
+        System.out.print("Enter your choice:");
+
+        choice = keyboard.nextDouble();
+while(choice >0){
+    if (choice == 1){
+        showKilometers(meters);
+        System.out.println(" ");
+
+    }
+    else if (choice == 2){
+        showInches(meters);
+        System.out.println(" ");
+
+    }
+    else if (choice == 3){
+        showFeet(meters);
+        System.out.println(" ");
+
+    }
+    else if (choice == 4){
+        //display Quit program
+        System.out.println("Bye");
+
+        System.exit(0);
+
+    }
+    else{
+        System.out.println("Incorrect input try again");
+        System.out.println(" ");
+
+    }
+    displayMenu();
+    System.out.print("Enter your choice:");
+    choice = keyboard.nextDouble();
+
+}
+
+        //else (){
+    //  System.out.println("You entered a wrong input ");
+
+    //    }
+
+
+
+
+    }
+
+    static void showKilometers (double meters){
+        double kilometers = meters * 0.001;
+        System.out.println( meters+ " meters is "+ kilometers +" kilometers");
+    }
+   static void showInches (double meters){
+        double Inches = meters * 39.37;
+        System.out.println( meters+" meters is "+ Inches +" inches");
+    }
+
+    static void showFeet (double meters){
+        double Feet = meters * 3.281;
+        System.out.println( meters+" meters is "+ Feet +" feets");
+    }
+
+     static void displayMenu() {
+        System.out.println("1. Convert to kilometers ");
+        System.out.println("2. Convert to inches ");
+        System.out.println("3. Convert to feet ");
+        System.out.println("4. Quit the program  ");
+         System.out.println(" ");
+
+     }
+
+    }
+
+
