@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 
@@ -7,7 +8,7 @@ public class Main {
     public static void main(String[] args)
     {
         double temp;
-        System.out.println("Type a Temp!");
+        System.out.println("Type a Temperature in Fahrenheit: ");
         //Temperature t = new Temperature(25);
 
         Scanner keyboard = new Scanner(System.in);
@@ -17,6 +18,7 @@ public class Main {
 
         Temperature x = new Temperature(temp);
 
+        System.out.println(" ");
         System.out.println(x.celsius());
         System.out.println(" ");
         System.out.println(x.kelvin());
@@ -24,8 +26,9 @@ public class Main {
     }
 
 
-}
 
+
+}
 
 
 
